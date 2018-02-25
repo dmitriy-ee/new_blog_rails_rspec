@@ -1,6 +1,6 @@
-require 'spec_helper'
+require "rails_helper"
 
-describe Comment do
+RSpec.describe Comment, :type => :model do
 
   it do 
     should belong_to :article

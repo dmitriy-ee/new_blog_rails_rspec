@@ -1,6 +1,6 @@
-require "spec_helper"
+require "rails_helper"
 
-describe Article do
+RSpec.describe Article, :type => :model do
 
   describe "validation" do 
     it do
