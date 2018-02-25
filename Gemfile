@@ -46,6 +46,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   #gem 'factory_girl_rails'
   gem 'factory_bot_rails'
+  gem 'bcrypt', platforms: :ruby
 end
 
 group :development do
