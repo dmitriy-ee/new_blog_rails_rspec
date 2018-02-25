@@ -44,9 +44,9 @@ group :development, :test do
   gem 'rspec-support'
   gem 'rspec-expectations'
   gem 'shoulda-matchers'
-  #gem 'factory_girl_rails'
   gem 'factory_bot_rails'
   gem 'bcrypt', platforms: :ruby
+  gem 'database_cleaner', '= 1.6.1'
 end
 
 group :development do
