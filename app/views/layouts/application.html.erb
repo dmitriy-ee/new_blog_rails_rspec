@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <!--a href="/users/sign_in">Sign In</a> | <a href="/users/sign_out" data-method="delete">Sign Out</a-->
+
+    <% if user_signed_in? %>
+
+      <%= current_user.username %> | <%= link_to 'Sign_OUT', destroy_user_session_path, method: :delete %>
+
+    <% else %>
+
+      <%= link_to 'Sign IN', new_user_session_path %>
+
+    <% end %>
+
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </body>
+</html>
